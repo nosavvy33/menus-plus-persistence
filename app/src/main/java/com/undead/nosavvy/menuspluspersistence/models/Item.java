@@ -18,7 +18,7 @@ public class Item {
         this.categoria = categoria;
         this.precio = precio;
         this.descripcion = descripcion;
-        this.estado = estado;
+        this.setEstado(estado);
     }
 
     private String nombre;
@@ -65,5 +65,13 @@ public class Item {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }

@@ -19,4 +19,21 @@ public class ItemRepository {
         Item item = new Item(name,category,price,description,state);
         SugarRecord.save(item);
     }
+
+    public static List<Item> selectNormalAndFavorites(){
+        List<Item> items = SugarRecord.find(Item.class,"estado IN (?,?)",new String[]{"favorito","normal"});
+        return items;
+    }
+
+    public static void updateEstadoArchivado(Long id){
+        Item item = SugarRecord.findById(Item.class,id);
+        item.setEstado("archivado");
+        SugarRecord.save(item);
+    }
+
+    public static void updateEstadoFavorito(Long id){
+        Item item = SugarRecord.findById(Item.class,id);
+        item.setEstado("favorito");
+        SugarRecord.save(item);
+    }
 }

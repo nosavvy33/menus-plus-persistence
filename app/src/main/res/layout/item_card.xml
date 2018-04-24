@@ -41,7 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_toStartOf="@+id/button"
-            android:text="Favoritos" />
+            android:text="Favoritos"
+            android:id="@+id/favoritos"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -49,7 +50,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
             android:text="Archivar"
-            android:id="@+id/button" />
+            android:id="@+id/archivados" />
 
     </RelativeLayout>
 </LinearLayout>
